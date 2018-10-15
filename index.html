@@ -3,13 +3,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
-    <!-- bootstrap.js - Bootstraps the application. This is the boilerplate of the whole Angularjs app -->
-    <script src="src/bootstrap.js"></script>
-
-    <!-- Controllers for features -->
-    <script src="src/features/home/home.js"></script>
-    <script src="src/features/binding-example/binding-example.js"></script>
 
     <!-- Styles -->
     <link rel="stylesheet" href="src/styles.css">
@@ -18,7 +11,7 @@
 
     <body>
         <!-- Everything inside this div uses the "app" module, and "appController" controller -->
-        <div ng-app="app" ng-controller="appController">
+        <div ng-app="app">
 
                 <!-- Bootstrap navbar, works with Router in src/bootstrap.js -->
                 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -46,4 +39,11 @@
                 
         </div>
     </body>
+
+    <!-- bootstrap.js - Bootstraps the application. This is the boilerplate of the whole Angularjs app -->
+    <script src="src/bootstrap.js"></script>
+
+    <!-- Controllers for features -->
+    <script src="src/features/home/home.js"></script>
+    <script src="src/features/binding-example/binding-example.js"></script>
 </html>
