@@ -1,8 +1,14 @@
-<!-- ng-model allows edits to a variable in the View to be reflected in Model -->
-<p ng-controller="bindingController">
-    First Name: <input type="text" ng-model="firstName"><br>
-    Last Name: <input type="text" ng-model="lastName"><br>
-    <br>
-    <!-- Expressions start and end with {{}}. Evaluated dynamically. -->
-    Full Name: {{firstName + " " + lastName}}
-</p>
+<div class="container container-background" ng-controller="bindingController">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- ng-model allows edits to a variable in the View to be reflected in Model -->
+                <p>
+                    First Name: <input type="text" ng-model="firstName"><br>
+                    Last Name: <input type="text" ng-model="lastName"><br>
+                    <br>
+                    <!-- Expressions start and end with {{}}. Evaluated dynamically. -->
+                    Full Name: {{firstName + " " + lastName}}
+                </p>
+            </div>
+        </div>
+    </div>
