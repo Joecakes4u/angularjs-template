@@ -2,5 +2,7 @@
 Angularjs template from scratch
 
 # Running the app
-Run `python -m SimpleHTTPServer`
+`cd angularjs-template`
+`npx webpack --config webpack.config.js`
+`python -m SimpleHTTPServer`
 Open the app on your browser at `localhost:8000`
