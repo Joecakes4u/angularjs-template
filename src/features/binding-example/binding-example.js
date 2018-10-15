@@ -1,5 +1,4 @@
-// define Controller "appController"
-// A Controller CONTROLS Angular
+// define Controller "bindingController"
 app.controller('bindingController', function($scope) {
     $scope.firstName = "Joe";
     $scope.lastName = "Wonohadidjojo";

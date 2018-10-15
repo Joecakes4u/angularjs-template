@@ -10,6 +10,9 @@ app.controller('appController', function($scope) {
 // define Router
 app.config(function($routeProvider) {
     $routeProvider
+    .when("/login", {
+        templateUrl: "src/features/login/login.html"
+    })
     .when("/binding-example", {
         templateUrl: "src/features/binding-example/binding-example.html"
     })
