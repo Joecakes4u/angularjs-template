@@ -10,31 +10,29 @@
     <body>
         <!-- Everything inside this div uses the "app" module, and "appController" controller -->
         <div ng-app="app">
+            <!-- Bootstrap navbar, works with Router in src/bootstrap.js -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Angularjs Template</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#!/binding-example">Binding</a>
+                        </li>
+                    </ul>
+                </div>
+                <form class="form-inline my-2 my-lg-0">
+                    <a href="#!/login" class="btn btn-outline-light my-2 my-sm-0">Login</a>
+                </form>
+            </nav>
 
-                <!-- Bootstrap navbar, works with Router in src/bootstrap.js -->
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <a class="navbar-brand" href="#">Angularjs Template</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#!/">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#!/binding-example">Binding</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <form class="form-inline my-2 my-lg-0">
-                        <a href="#!/login" class="btn btn-outline-light my-2 my-sm-0">Login</a>
-                    </form>
-                </nav>
-
-                <!-- Template HTML for each view is displayed here -->
-                <div ng-view></div>
-                
+            <!-- Template HTML for each view is displayed here -->
+            <div ng-view></div>
         </div>
     </body>
 
@@ -42,8 +40,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 
-    <!-- bootstrap.js - Bootstraps the application. This is the boilerplate of the whole Angularjs app -->
-    <script src="src/bootstrap.js"></script>
+    <!-- Bootstraps the application. This is the boilerplate of the whole Angularjs app -->
+    <script src="src/app.module.js"></script>
+    <script src="src/app.controller.js"></script>
+    <script src="src/app.config.js"></script>
+    <script src="src/app.bootstrap.js"></script>
 
     <!-- Controllers for features -->
     <script src="src/features/home/home.js"></script>
