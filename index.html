@@ -4,8 +4,9 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="src/styles.css">
-    <link rel="stylesheet" href="src/features/home/home.css">
-    <link rel="stylesheet" href="src/features/binding-example/binding-example.css">
+    <link rel="stylesheet" href="src/features/home/home.template.css">
+    <link rel="stylesheet" href="src/features/binding-example/binding-example.template.css">
+    <link rel="stylesheet" href="src/features/login/login.template.css">
 
     <body>
         <!-- Everything inside this div uses the "app" module, and "appController" controller -->
@@ -40,13 +41,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
 
-    <!-- Bootstraps the application. This is the boilerplate of the whole Angularjs app -->
-    <script src="src/bundle.js"></script>
-    <script src="src/app.controller.js"></script>
-    <script src="src/app.config.js"></script>
-    <script src="src/app.bootstrap.js"></script>
-
-    <!-- Controllers for features -->
-    <script src="src/features/home/home.js"></script>
-    <script src="src/features/binding-example/binding-example.js"></script>
+    <script src="dist/bundle.js"></script>
 </html>
