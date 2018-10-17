@@ -1,3 +1,5 @@
+import { app } from "./app.module";
+
 // define Router
 app.config(function($routeProvider) {
     $routeProvider

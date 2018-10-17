@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/app.bootstrap.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -94,7 +94,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.module */ \"./src/app.module.js\");\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_app_module__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./app.config */ \"./src/app.config.js\");\n/* harmony import */ var _app_config__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_app_config__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _app_controller__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.controller */ \"./src/app.controller.js\");\n/* harmony import */ var _app_controller__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_app_controller__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _features_home_home_controller__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./features/home/home.controller */ \"./src/features/home/home.controller.js\");\n/* harmony import */ var _features_home_home_controller__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_features_home_home_controller__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _features_binding_example_binding_example_controller__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./features/binding-example/binding-example.controller */ \"./src/features/binding-example/binding-example.controller.js\");\n/* harmony import */ var _features_binding_example_binding_example_controller__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_features_binding_example_binding_example_controller__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _features_login_login_controller__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./features/login/login.controller */ \"./src/features/login/login.controller.js\");\n/* harmony import */ var _features_login_login_controller__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_features_login_login_controller__WEBPACK_IMPORTED_MODULE_5__);\n// Import statements for webpack to create bundle.js\n\n\n\n\n\n\n\napp.run(function() {\n\n});\n\n//# sourceURL=webpack:///./src/app.bootstrap.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.module */ \"./src/app.module.js\");\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_app_module__WEBPACK_IMPORTED_MODULE_0__);\n\n\n_app_module__WEBPACK_IMPORTED_MODULE_0__[\"app\"].run(function() {\n\n});\n\n//# sourceURL=webpack:///./src/app.bootstrap.js?");
 
 /***/ }),
 
@@ -102,10 +102,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _app
 /*!***************************!*\
   !*** ./src/app.config.js ***!
   \***************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("// define Router\napp.config(function($routeProvider) {\n    $routeProvider\n    .when(\"/login\", {\n        templateUrl: \"src/features/login/login.template.html\"\n    })\n    .when(\"/binding-example\", {\n        templateUrl: \"src/features/binding-example/binding-example.template.html\"\n    })\n    .when(\"/\", {\n        templateUrl: \"src/features/home/home.template.html\"\n    })\n    .otherwise({\n        templateUrl: \"src/features/home/home.template.html\"\n    });\n});\n\n//# sourceURL=webpack:///./src/app.config.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.module */ \"./src/app.module.js\");\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_app_module__WEBPACK_IMPORTED_MODULE_0__);\n\n\n// define Router\n_app_module__WEBPACK_IMPORTED_MODULE_0__[\"app\"].config(function($routeProvider) {\n    $routeProvider\n    .when(\"/login\", {\n        templateUrl: \"src/features/login/login.template.html\"\n    })\n    .when(\"/binding-example\", {\n        templateUrl: \"src/features/binding-example/binding-example.template.html\"\n    })\n    .when(\"/\", {\n        templateUrl: \"src/features/home/home.template.html\"\n    })\n    .otherwise({\n        templateUrl: \"src/features/home/home.template.html\"\n    });\n});\n\n//# sourceURL=webpack:///./src/app.config.js?");
 
 /***/ }),
 
@@ -113,10 +114,11 @@ eval("// define Router\napp.config(function($routeProvider) {\n    $routeProvide
 /*!*******************************!*\
   !*** ./src/app.controller.js ***!
   \*******************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("// define Controller \"appController\"\n// A Controller CONTROLS Angular\napp.controller('appController', function($scope) {\n});\n\n//# sourceURL=webpack:///./src/app.controller.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.module */ \"./src/app.module.js\");\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_app_module__WEBPACK_IMPORTED_MODULE_0__);\n\n\n// define Controller \"appController\"\n// A Controller CONTROLS Angular\n_app_module__WEBPACK_IMPORTED_MODULE_0__[\"app\"].controller('appController', function($scope) {\n});\n\n//# sourceURL=webpack:///./src/app.controller.js?");
 
 /***/ }),
 
@@ -127,7 +129,7 @@ eval("// define Controller \"appController\"\n// A Controller CONTROLS Angular\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n// define Module \"app\"\n// A Module DEFINES Angularjs applications\nvar app = angular.module('app', [\"ngRoute\"]);\n\n//# sourceURL=webpack:///./src/app.module.js?");
+eval("// define Module \"app\"\n// A Module DEFINES Angularjs applications\n\nvar app = angular.module('app', [\"ngRoute\"]);\n\nexports.app = app;\n\n\n//# sourceURL=webpack:///./src/app.module.js?");
 
 /***/ }),
 
@@ -135,10 +137,11 @@ eval("\n\n// define Module \"app\"\n// A Module DEFINES Angularjs applications\n
 /*!********************************************************************!*\
   !*** ./src/features/binding-example/binding-example.controller.js ***!
   \********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("// define Controller \"bindingController\"\napp.controller('bindingController', function($scope) {\n    $scope.firstName = \"Joe\";\n    $scope.lastName = \"Wonohadidjojo\";\n});\n\n//# sourceURL=webpack:///./src/features/binding-example/binding-example.controller.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../app.module */ \"./src/app.module.js\");\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_app_module__WEBPACK_IMPORTED_MODULE_0__);\n\n\n// define Controller \"bindingController\"\n_app_module__WEBPACK_IMPORTED_MODULE_0__[\"app\"].controller('bindingController', function($scope) {\n    $scope.firstName = \"Joe\";\n    $scope.lastName = \"Wonohadidjojo\";\n});\n\n//# sourceURL=webpack:///./src/features/binding-example/binding-example.controller.js?");
 
 /***/ }),
 
@@ -157,10 +160,22 @@ eval("\n\n//# sourceURL=webpack:///./src/features/home/home.controller.js?");
 /*!************************************************!*\
   !*** ./src/features/login/login.controller.js ***!
   \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("// define Controller \"formController\"\napp.controller('formController', function($scope) {\n    $scope.master = {firstName:\"John\", lastName:\"Doe\"};\n    $scope.reset = function() {\n        $scope.user = angular.copy($scope.master);\n    };\n    $scope.reset();\n});\n\n//# sourceURL=webpack:///./src/features/login/login.controller.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../app.module */ \"./src/app.module.js\");\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_app_module__WEBPACK_IMPORTED_MODULE_0__);\n\n\n// define Controller \"formController\"\n_app_module__WEBPACK_IMPORTED_MODULE_0__[\"app\"].controller('formController', function($scope) {\n    $scope.master = {firstName:\"John\", lastName:\"Doe\"};\n    $scope.reset = function() {\n        $scope.user = angular.copy($scope.master);\n    };\n    $scope.reset();\n});\n\n//# sourceURL=webpack:///./src/features/login/login.controller.js?");
+
+/***/ }),
+
+/***/ 0:
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./src/app.bootstrap.js ./src/app.config.js ./src/app.controller.js ./src/features/binding-example/binding-example.controller.js ./src/features/home/home.controller.js ./src/features/login/login.controller.js ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("__webpack_require__(/*! ./src/app.bootstrap.js */\"./src/app.bootstrap.js\");\n__webpack_require__(/*! ./src/app.config.js */\"./src/app.config.js\");\n__webpack_require__(/*! ./src/app.controller.js */\"./src/app.controller.js\");\n__webpack_require__(/*! ./src/features/binding-example/binding-example.controller.js */\"./src/features/binding-example/binding-example.controller.js\");\n__webpack_require__(/*! ./src/features/home/home.controller.js */\"./src/features/home/home.controller.js\");\nmodule.exports = __webpack_require__(/*! ./src/features/login/login.controller.js */\"./src/features/login/login.controller.js\");\n\n\n//# sourceURL=webpack:///multi_./src/app.bootstrap.js_./src/app.config.js_./src/app.controller.js_./src/features/binding-example/binding-example.controller.js_./src/features/home/home.controller.js_./src/features/login/login.controller.js?");
 
 /***/ })
 
