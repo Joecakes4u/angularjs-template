@@ -1,0 +1,30 @@
+{
+  "name": "angularjs-template",
+  "version": "1.0.0",
+  "description": "Angularjs template from scratch",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp-connect": "^5.6.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-sass": "^4.0.2",
+    "webpack-cli": "^3.1.2",
+    "webpack": "^4.20.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joecakes4u/angularjs-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joecakes4u/angularjs-template/issues"
+  },
+  "homepage": "https://github.com/Joecakes4u/angularjs-template#readme"
+}

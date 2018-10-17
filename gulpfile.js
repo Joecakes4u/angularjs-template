@@ -42,11 +42,24 @@ gulp.task('js', function () {
     .pipe(connect.reload());
 });
 
-gulp.task('watch', ['css','html', 'js'], function() {
+gulp.task('sass', function() {
+  return gulp.src('assets/sass/*.scss')
+    .pipe($.sass({
+      includePaths: sassPaths
+    })
+      .on('error', $.sass.logError))
+    .pipe($.autoprefixer({
+      browsers: ['last 2 versions', 'ie >= 9']
+    }))
+    .pipe(gulp.dest('assets/css'))
+    .pipe(connect.reload());
+});
+
+gulp.task('watch', ['sass','html', 'js'], function() {
   gulp.watch(['*.html'], ['html']);
-  gulp.watch(['src/*.html'], ['html']);
-  gulp.watch(['src/*.css'], ['css']);
-  gulp.watch(['src/*.js'], ['js']);
+  gulp.watch(['includes/**/*.html'], ['html']);
+  gulp.watch(['assets/sass/**/*.scss'], ['sass']);
+  gulp.watch(['assets/js/**/*.js'], ['js']);
 });
 
 gulp.task('default', ['sass', 'webserver', 'watch']);
