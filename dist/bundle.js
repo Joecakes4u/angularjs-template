@@ -106,7 +106,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _app
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.module */ \"./src/app.module.js\");\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_app_module__WEBPACK_IMPORTED_MODULE_0__);\n\n\n// define Router\n_app_module__WEBPACK_IMPORTED_MODULE_0__[\"app\"].config(function($routeProvider) {\n    $routeProvider\n    .when(\"/login\", {\n        templateUrl: \"src/features/login/login.template.html\"\n    })\n    .when(\"/binding-example\", {\n        templateUrl: \"src/features/binding-example/binding-example.template.html\"\n    })\n    .when(\"/\", {\n        templateUrl: \"src/features/home/home.template.html\"\n    })\n    .otherwise({\n        templateUrl: \"src/features/home/home.template.html\"\n    });\n});\n\n//# sourceURL=webpack:///./src/app.config.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app.module */ \"./src/app.module.js\");\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_app_module__WEBPACK_IMPORTED_MODULE_0__);\n\n\n// define Router\n_app_module__WEBPACK_IMPORTED_MODULE_0__[\"app\"].config(function($routeProvider, $locationProvider) {\n    $routeProvider\n    .when(\"/login\", {\n        templateUrl: \"src/features/login/login.template.html\"\n    })\n    .when(\"/profile\", {\n        templateUrl: \"src/features/profile/profile.template.html\"\n    })\n    .when(\"/binding-example\", {\n        templateUrl: \"src/features/binding-example/binding-example.template.html\"\n    })\n    .when(\"/\", {\n        templateUrl: \"src/features/home/home.template.html\"\n    })\n    .otherwise({\n        templateUrl: \"src/features/home/home.template.html\"\n    });\n\n    $locationProvider\n    .hashPrefix('!');\n});\n\n//# sourceURL=webpack:///./src/app.config.js?");
 
 /***/ }),
 
@@ -164,18 +164,41 @@ eval("\n\n//# sourceURL=webpack:///./src/features/home/home.controller.js?");
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../app.module */ \"./src/app.module.js\");\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_app_module__WEBPACK_IMPORTED_MODULE_0__);\n\n\n// define Controller \"formController\"\n_app_module__WEBPACK_IMPORTED_MODULE_0__[\"app\"].controller('formController', function($scope) {\n    $scope.master = {firstName:\"John\", lastName:\"Doe\"};\n    $scope.reset = function() {\n        $scope.user = angular.copy($scope.master);\n    };\n    $scope.reset();\n});\n\n//# sourceURL=webpack:///./src/features/login/login.controller.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../app.module */ \"./src/app.module.js\");\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_app_module__WEBPACK_IMPORTED_MODULE_0__);\n\n\n// define Controller \"loginController\"\n_app_module__WEBPACK_IMPORTED_MODULE_0__[\"app\"].controller('loginController', function($scope, $location, RestService) {\n    \n    // Login, calls auth service\n    $scope.login = function() {\n        $scope.dataLoading = true;\n        const response = RestService.login($scope.username, $scope.password);\n        if (response.success) {\n            $location.path('/profile').replace();\n        } else {\n            $scope.dataLoading = false;\n            console.log('asdfasd');\n        }\n    };\n});\n\n//# sourceURL=webpack:///./src/features/login/login.controller.js?");
+
+/***/ }),
+
+/***/ "./src/features/profile/profile.controller.js":
+/*!****************************************************!*\
+  !*** ./src/features/profile/profile.controller.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("\n\n//# sourceURL=webpack:///./src/features/profile/profile.controller.js?");
+
+/***/ }),
+
+/***/ "./src/services/rest.service.js":
+/*!**************************************!*\
+  !*** ./src/services/rest.service.js ***!
+  \**************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../app.module */ \"./src/app.module.js\");\n/* harmony import */ var _app_module__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_app_module__WEBPACK_IMPORTED_MODULE_0__);\n\n\n_app_module__WEBPACK_IMPORTED_MODULE_0__[\"app\"].factory('RestService', function($http) {\n    let service = {};\n    const urlBase = '/api/v1';\n    let response = '';\n    service.login = function(username, password) {\n        if (username !== null && password=== 'password') {\n            response = { success: true };\n        } else {\n            response = { success: false, message: 'Username or password is incorrect' };\n        }\n        return response;\n    };\n  \n    service.getUser = function(id){\n        return $http.get(urlBase + '/user/' + id);\n    };\n  \n    return service;\n  \n  });\n\n//# sourceURL=webpack:///./src/services/rest.service.js?");
 
 /***/ }),
 
 /***/ 0:
-/*!*****************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./src/app.bootstrap.js ./src/app.config.js ./src/app.controller.js ./src/features/binding-example/binding-example.controller.js ./src/features/home/home.controller.js ./src/features/login/login.controller.js ***!
-  \*****************************************************************************************************************************************************************************************************************************/
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./src/app.bootstrap.js ./src/app.config.js ./src/app.controller.js ./src/features/binding-example/binding-example.controller.js ./src/features/home/home.controller.js ./src/features/login/login.controller.js ./src/features/profile/profile.controller.js ./src/services/rest.service.js ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./src/app.bootstrap.js */\"./src/app.bootstrap.js\");\n__webpack_require__(/*! ./src/app.config.js */\"./src/app.config.js\");\n__webpack_require__(/*! ./src/app.controller.js */\"./src/app.controller.js\");\n__webpack_require__(/*! ./src/features/binding-example/binding-example.controller.js */\"./src/features/binding-example/binding-example.controller.js\");\n__webpack_require__(/*! ./src/features/home/home.controller.js */\"./src/features/home/home.controller.js\");\nmodule.exports = __webpack_require__(/*! ./src/features/login/login.controller.js */\"./src/features/login/login.controller.js\");\n\n\n//# sourceURL=webpack:///multi_./src/app.bootstrap.js_./src/app.config.js_./src/app.controller.js_./src/features/binding-example/binding-example.controller.js_./src/features/home/home.controller.js_./src/features/login/login.controller.js?");
+eval("__webpack_require__(/*! ./src/app.bootstrap.js */\"./src/app.bootstrap.js\");\n__webpack_require__(/*! ./src/app.config.js */\"./src/app.config.js\");\n__webpack_require__(/*! ./src/app.controller.js */\"./src/app.controller.js\");\n__webpack_require__(/*! ./src/features/binding-example/binding-example.controller.js */\"./src/features/binding-example/binding-example.controller.js\");\n__webpack_require__(/*! ./src/features/home/home.controller.js */\"./src/features/home/home.controller.js\");\n__webpack_require__(/*! ./src/features/login/login.controller.js */\"./src/features/login/login.controller.js\");\n__webpack_require__(/*! ./src/features/profile/profile.controller.js */\"./src/features/profile/profile.controller.js\");\nmodule.exports = __webpack_require__(/*! ./src/services/rest.service.js */\"./src/services/rest.service.js\");\n\n\n//# sourceURL=webpack:///multi_./src/app.bootstrap.js_./src/app.config.js_./src/app.controller.js_./src/features/binding-example/binding-example.controller.js_./src/features/home/home.controller.js_./src/features/login/login.controller.js_./src/features/profile/profile.controller.js_./src/services/rest.service.js?");
 
 /***/ })
 

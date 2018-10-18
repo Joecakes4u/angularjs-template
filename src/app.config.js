@@ -1,10 +1,13 @@
 import { app } from "./app.module";
 
 // define Router
-app.config(function($routeProvider) {
+app.config(function($routeProvider, $locationProvider) {
     $routeProvider
     .when("/login", {
         templateUrl: "src/features/login/login.template.html"
+    })
+    .when("/profile", {
+        templateUrl: "src/features/profile/profile.template.html"
     })
     .when("/binding-example", {
         templateUrl: "src/features/binding-example/binding-example.template.html"
@@ -15,4 +18,7 @@ app.config(function($routeProvider) {
     .otherwise({
         templateUrl: "src/features/home/home.template.html"
     });
+
+    $locationProvider
+    .hashPrefix('!');
 });
