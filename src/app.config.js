@@ -13,7 +13,8 @@ app.config(function($routeProvider, $locationProvider) {
         templateUrl: "src/features/binding-example/binding-example.template.html"
     })
     .when("/", {
-        templateUrl: "src/features/home/home.template.html"
+        templateUrl: "src/features/home/home.template.html",
+        controller: "homeController"
     })
     .otherwise({
         templateUrl: "src/features/home/home.template.html"

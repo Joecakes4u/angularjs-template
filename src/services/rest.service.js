@@ -1,10 +1,11 @@
 import { app } from "../app.module"
+import { apiUrl } from "../environment/environment" 
 
 app.factory('RestService', function($http) {
     let service = {};
-    const urlBase = '/api/v1';
-    let response = '';
     service.login = function(username, password) {
+        const url = apiUrl + 'user'
+        let response = '';
         if (username !== null && password=== 'password') {
             response = { success: true };
         } else {
@@ -13,8 +14,8 @@ app.factory('RestService', function($http) {
         return response;
     };
   
-    service.getUser = function(id){
-        return $http.get(urlBase + '/user/' + id);
+    service.checkApi = function(){
+        return $http.get(apiUrl + 'greeting')
     };
   
     return service;
